@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \providecommand{\urlprefix}{}
@@ -29,28 +29,6 @@ Adger, David. 2004.
 Barwise, Jon \& Robin Cooper. 1981.
 \newblock Generalized quantifiers in natural language.
 \newblock \emph{Linguistics and Philosophy} 4(1). 159--219.
-
-\bibitem[{Chomsky(1957)}]{Chomsky57a}
-Chomsky, Noam. 1957.
-\newblock \emph{Syntactic structures} (Janua Linguarum [Series minor]~4).
-\newblock The Hague: Mouton de Gruyter.
-
-\bibitem[{Chomsky(1965)}]{Chomsky65a}
-Chomsky, Noam. 1965.
-\newblock \emph{Aspects of the theory of syntax}.
-\newblock Cambridge: MIT Press.
-
-\bibitem[{Chomsky(1970)}]{Chomsky70a}
-Chomsky, Noam. 1970.
-\newblock Remarks on nominalization.
-\newblock In Roderick~A. Jacobs \& Peter~S. Rosenbaum (eds.), \emph{Readings in
-  english transformational grammar}, 184--221. Waltham: Ginn \& Company.
-
-\bibitem[{Chomsky(1981)}]{Chomsky81b}
-Chomsky, Noam. 1981.
-\newblock \emph{Lectures on government and binding} Studies in Generative
-  Grammar.
-\newblock Dordrecht: Foris Publications.
 
 \bibitem[{Comrie et~al.(2015)Comrie, Haspelmath \& Bickel}]{LeipzigGloss15a}
 Comrie, Bernard, Martin Haspelmath \& Balthasar Bickel. 2015.
@@ -86,32 +64,11 @@ Heim, Irene \& Angelika Kratzer. 2000.
   Linguistics~13).
 \newblock Oxford: Blackwell 2nd edn.
 
-\bibitem[{Kertész et~al.(2019)Kertész, Moravcsik \& Rákosi}]{Kertesz&Co19a}
-Kertész, András, Edith Moravcsik \& Csilla Rákosi (eds.). 2019.
-\newblock \emph{Current approaches to syntax: A comparative handbook}
-  (Comparative Handbooks of Linguistics~3).
-\newblock Berlin: De Gruyter Mouton.
-
-\bibitem[{Kohm \& Morawski(2014)}]{Kohm&Co13a}
-Kohm, Markus \& Jens-Uwe Morawski. 2014.
-\newblock Die {Anleitung}: {KOMA}-script.
-\newblock Online-Handbuch.
-\newblock \urlprefix\url{http://www.ctan.org/pkg/koma-script}.
-
 \bibitem[{Kolb et~al.(2010)Kolb, Thiersch \& Dimitriadis}]{Kolb&Co10a}
 Kolb, Hans-Peter, Craig Thiersch \& Alexis Dimitriadis. 2010.
 \newblock Preliminary documentation for gb4e.sty and cgloss4e.sty.
 \newblock \emph{CTAN: Comprehensive TeX Archive Network}
   \urlprefix\url{http://www.ctan.org/pkg/gb4e}.
-
-\bibitem[{Krifka(2014)}]{Krifka14a}
-Krifka, Manfred. 2014.
-\newblock \emph{Ja}, \emph{nein}, \emph{doch} als sententiale {A}naphern und
-  deren pragmatische {O}ptimierung.
-\newblock In Antonio {Machicao y Priemer}, Andreas Nolda \& Athina Sioupi
-  (eds.), \emph{Zwischen {K}ern und {P}eripherie: {U}ntersuchungen zu
-  {R}andbereichen in {S}prache und {G}rammatik} (Studia grammatica~76), 41--67.
-  Berlin: De Gruyter.
 
 \bibitem[{{Machicao y Priemer}(2018)}]{MyP18b}
 {Machicao y Priemer}, Antonio. 2018.
@@ -142,13 +99,5 @@ Nolda, Andreas, Antonio {Machicao y Priemer} \& Athina Sioupi. 2014.
 Rothstein, Björn. 2011.
 \newblock \emph{{Wissenschaftliches} {Arbeiten} für {Linguisten}}.
 \newblock Tübingen: Narr.
-
-\bibitem[{Wiese \& Piñango(2014)}]{Wiese&Co14a}
-Wiese, Heike \& Maria Piñango. 2014.
-\newblock Computations in the {Mental Lexicon}: Noun classes and the mass/count
-  distinction.
-\newblock In Antonio {Machicao y Priemer}, Andreas Nolda \& Athina Sioupi
-  (eds.), \emph{Zwischen kern und peripherie: Untersuchungen zu randbereichen
-  in sprache und grammatik}, 209--235. Berlin: De Gruyter.
 
 \end{thebibliography}

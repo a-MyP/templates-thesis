@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.13)  13 APR 2025 22:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.13)  13 APR 2025 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1644,7 +1644,7 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 10.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-6.
+5.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
@@ -1749,6 +1749,15 @@ LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 11.
+
+
+LaTeX Warning: Reference `ch:TextPositioning' on page 9 undefined on input line
+ 15.
+
+
+LaTeX Warning: Reference `ch:Chapternotes' on page 9 undefined on input line 25
+.
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 27.
 
@@ -1766,155 +1775,91 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 64.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 64.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sl' in size <8> not av
 ailable
 (Font)              Font shape `T1/LinuxLibertineT-TLF/m/it' tried instead on i
-nput line 118.
+nput line 127.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 118.
+(Font)              scaled to size 8.0pt on input line 127.
  [10]
-
-LaTeX Font Warning: Font shape `T1/LinuxLibertineT-TLF/m/ulcup' undefined
-(Font)              using `T1/LinuxLibertineT-TLF/m/n' instead on input line 15
-5.
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/ulcup' will be
-(Font)              scaled to size 10.95pt on input line 155.
-<graphics/Young-Frege.jpg, id=304, 110.3322pt x 149.1171pt>
+<graphics/Young-Frege.jpg, id=245, 110.3322pt x 149.1171pt>
 File: graphics/Young-Frege.jpg Graphic file (type jpg)
 <use graphics/Young-Frege.jpg>
-Package pdftex.def Info: graphics/Young-Frege.jpg  used on input line 191.
+Package pdftex.def Info: graphics/Young-Frege.jpg  used on input line 143.
 (pdftex.def)             Requested size: 49.64902pt x 67.10207pt.
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 206--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--217
-
- []
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 240.
-[12 <./graphics/Young-Frege.jpg>]
+ [11 <./graphics/Young-Frege.jpg>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 267.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 218.
+
+Overfull \hbox (4.44926pt too wide) in paragraph at lines 222--223
+\T1/LinuxLibertineT-TLF/m/n/10.95 The pack-age \T1/lmtt/m/n/10.95 natbib \T1/Li
+nuxLibertineT-TLF/m/n/10.95 (loaded in \T1/lmtt/m/n/10.95 texfiles/localpackage
+s\T1/LinuxLibertineT-TLF/m/n/10.95 ) pro-vides dif-fer-ent com-mands
+ []
+
+
+Overfull \hbox (33.16501pt too wide) in paragraph at lines 222--223
+\T1/LinuxLibertineT-TLF/m/n/10.95 for ci-ta-tions. You can find the IDs for ev-
+ery bib-li-og-ra-phy en-try in the file \T1/lmtt/m/n/10.95 texfiles/literature\
+T1/LinuxLibertineT-TLF/m/n/10.95 ,
+ []
+
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 281.
-Package acronym Info: Label `acro:GPSG' newly defined as it shall be overridden
-
-although it is yet undefined on input line 316.
- [13]
+(Font)              scaled to size 9.0pt on input line 231.
+[12]
 Package acronym Info: Label `acro:acc' newly defined as it shall be overridden
-although it is yet undefined on input line 323.
-Package acronym Info: Label `acro:ARG-ST' newly defined as it shall be overridd
-en
-although it is yet undefined on input line 324.
-Package acronym Info: Label `acro:AVM' newly defined as it shall be overridden
-although it is yet undefined on input line 325.
-Package acronym Info: Label `acro:BAG' newly defined as it shall be overridden
-although it is yet undefined on input line 326.
+although it is yet undefined on input line 277.
 Package acronym Info: Label `acro:CP' newly defined as it shall be overridden
-although it is yet undefined on input line 327.
+although it is yet undefined on input line 278.
 Package acronym Info: Label `acro:dat' newly defined as it shall be overridden
-although it is yet undefined on input line 328.
-Package acronym Info: Label `acro:DTR' newly defined as it shall be overridden
-although it is yet undefined on input line 329.
-Package acronym Info: Label `acro:EXP' newly defined as it shall be overridden
-although it is yet undefined on input line 330.
-Package acronym Info: Label `acro:gen' newly defined as it shall be overridden
-although it is yet undefined on input line 331.
-Package acronym Info: Label `acro:HFC' newly defined as it shall be overridden
-although it is yet undefined on input line 333.
+although it is yet undefined on input line 279.
 Package acronym Info: Label `acro:IPA' newly defined as it shall be overridden
-although it is yet undefined on input line 334.
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
-[]\T1/LinuxLibertineT-TLF/m/ulcup/10.95 International Pho-netic Al-pha-bet
- []
-
-Package acronym Info: Label `acro:LEX-DTR' newly defined as it shall be overrid
-den
-although it is yet undefined on input line 335.
-Package acronym Info: Label `acro:lxgen' newly defined as it shall be overridde
-n
-although it is yet undefined on input line 336.
-Package acronym Info: Label `acro:lxnom' newly defined as it shall be overridde
-n
-although it is yet undefined on input line 337.
-Package acronym Info: Label `acro:MRS' newly defined as it shall be overridden
-although it is yet undefined on input line 338.
-Package acronym Info: Label `acro:NP' newly defined as it shall be overridden
-although it is yet undefined on input line 339.
-Package acronym Info: Label `acro:QP' newly defined as it shall be overridden
-although it is yet undefined on input line 340.
-Package acronym Info: Label `acro:S' newly defined as it shall be overridden
-although it is yet undefined on input line 341.
-Package acronym Info: Label `acro:SemP' newly defined as it shall be overridden
-
-although it is yet undefined on input line 342.
-Package acronym Info: Label `acro:TAG' newly defined as it shall be overridden
-although it is yet undefined on input line 343.
-Package acronym Info: Label `acro:TH' newly defined as it shall be overridden
-although it is yet undefined on input line 344.
-[14]
+although it is yet undefined on input line 280.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 379.
-
-Overfull \hbox (5.99695pt too wide) in paragraph at lines 379--380
-\T1/LinuxLibertineT-TLF/m/ulcup/10.95 us-ing the pack-age \T1/lmtt/m/n/10.95 \t
-odonotes\T1/LinuxLibertineT-TLF/m/ulcup/10.95 . Two fur-ther com-mands are de-f
-ined in the \T1/lmtt/m/n/10.95 localcommands
- []
-
-
-LaTeX Warning: Marginpar on page 15 moved.
-
-
-LaTeX Warning: Marginpar on page 15 moved.
-
-) [15] [16
+ine 291.
+) [13] [14
 
 
 ] (./diss-master.bbl
-Underfull \hbox (badness 2042) in paragraph at lines 62--68
-[]\T1/LinuxLibertineT-TLF/m/ulcup/10.95 DR. 2017.  \T1/LinuxLibertineT-TLF/m/it
-/10.95 Deutsche Rechtschrei-bung: Regeln und Wörter-verze-ich-nis. Ak-tu-al-isi
-erte
+Underfull \hbox (badness 2042) in paragraph at lines 40--46
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 DR. 2017.  \T1/LinuxLibertineT-TLF/m/it/10.
+95 Deutsche Rechtschrei-bung: Regeln und Wörter-verze-ich-nis. Ak-tu-al-isierte
+
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 62--68
+Underfull \hbox (badness 3333) in paragraph at lines 40--46
 \T1/LinuxLibertineT-TLF/m/it/10.95 Fas-sung des amtlichen Regel-w-erks entsprec
 hend den Empfehlun-gen des Rats für
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 77--82
-[]\T1/LinuxLibertineT-TLF/m/ulcup/10.95 Haspelmath, Mar-tin. 2014.  The generic
- style rules for lin-guis-tics.  Manuscript.
+Underfull \hbox (badness 1342) in paragraph at lines 55--60
+[]\T1/LinuxLibertineT-TLF/m/n/10.95 Haspelmath, Mar-tin. 2014.  The generic sty
+le rules for lin-guis-tics.  Manuscript.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--82
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 []$\T1/lmtt/m/n/10.95 http : / / www . eva . mpg . de / linguistics / staff / m
 artin-[]haspelmath /
  []
 
-[17
 
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 126--131
+Underfull \hbox (badness 10000) in paragraph at lines 83--88
 []$\T1/lmtt/m/n/10.95 https : / / www . linguistik . hu-[]berlin . de / de / st
 aff / amyp / downloads /
  []
 
-) [18]
+[15
+
+
+]) [16]
 runsystem(makeindex diss-master.idx)...executed safely (allowed).
 
- (./diss-master.ind) [19
+ (./diss-master.ind) [17
 
 
 
@@ -1923,40 +1868,38 @@ runsystem(makeindex diss-master.idx)...executed safely (allowed).
 
 ] (./diss-master.aux)
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `diss-master.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 43968 strings out of 478994
- 923448 string characters out of 5858184
- 1409000 words of memory out of 5000000
- 60477 multiletter control sequences out of 15000+600000
- 525711 words of font info for 160 fonts, out of 8000000 for 9000
+ 44939 strings out of 478994
+ 934657 string characters out of 5858184
+ 1470281 words of memory out of 5000000
+ 61463 multiletter control sequences out of 15000+600000
+ 521801 words of font info for 159 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
- 111i,23n,125p,10606b,956s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 111i,24n,125p,10606b,1991s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}{/usr/local/t
-exlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/te
-xlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{/usr/local/tex
-live/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/texl
-ive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texli
-ve/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/local/texliv
-e/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}</usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineTBI.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineTI
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on diss-master.pdf (31 pages, 704869 bytes).
+texlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/usr/local/t
+exlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_ki75ao.enc}{/usr/local/te
+xlive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}{/usr/local/tex
+live/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/usr/local/texl
+ive/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/usr/local/texli
+ve/2021/texmf-dist/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}</usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineTBI.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/libertine/LinLibertineT
+I.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
+Output written on diss-master.pdf (29 pages, 675002 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 563 compressed objects within 6 object streams
- 139 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 518 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 

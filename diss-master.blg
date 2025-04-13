@@ -2,46 +2,46 @@ This is BibTeX, Version 0.99d (TeX Live 2021)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: diss-master.aux
 The style file: texfiles/unified.bst
-Database file #1: literature.bib
+Database file #1: texfiles/literature.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 22 entries,
+You've used 14 entries,
             3166 wiz_defined-function locations,
-            772 strings with 8277 characters,
-and the built_in function-call counts, 12033 in all, are:
-= -- 999
-> -- 401
-< -- 25
-+ -- 143
-- -- 117
-* -- 748
-:= -- 1884
-add.period$ -- 99
-call.type$ -- 22
-change.case$ -- 166
-chr.to.int$ -- 25
-cite$ -- 22
-duplicate$ -- 999
-empty$ -- 974
-format.name$ -- 172
-if$ -- 2455
+            720 strings with 7052 characters,
+and the built_in function-call counts, 7339 in all, are:
+= -- 615
+> -- 249
+< -- 15
++ -- 91
+- -- 73
+* -- 459
+:= -- 1169
+add.period$ -- 63
+call.type$ -- 14
+change.case$ -- 105
+chr.to.int$ -- 17
+cite$ -- 14
+duplicate$ -- 604
+empty$ -- 576
+format.name$ -- 107
+if$ -- 1476
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 203
-newline$ -- 125
-num.names$ -- 97
-pop$ -- 425
+missing$ -- 122
+newline$ -- 84
+num.names$ -- 58
+pop$ -- 259
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 79
 quote$ -- 0
-skip$ -- 362
+skip$ -- 213
 stack$ -- 0
-substring$ -- 412
-swap$ -- 453
-text.length$ -- 7
+substring$ -- 236
+swap$ -- 266
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 177
+type$ -- 117
 warning$ -- 0
-while$ -- 87
+while$ -- 51
 width$ -- 0
-write$ -- 308
+write$ -- 200

@@ -1,6 +1,9 @@
 This is makeindex, version 2.15 [TeX Live 2021] (kpathsea + Thai support).
-Scanning input file diss-master.idx....done (12 entries accepted, 0 rejected).
-Sorting entries....done (56 comparisons).
-Generating output file diss-master.ind....done (22 lines written, 0 warnings).
+Scanning input file diss-master.idx....done (1 entries accepted, 0 rejected).
+Sorting entries...done (0 comparisons).
+Generating output file diss-master.ind....
+## Warning (input = diss-master.idx, line = 1; output = diss-master.ind, line = 3):
+   -- Unmatched range opening operator (.
+done (5 lines written, 1 warning).
 Output written in diss-master.ind.
 Transcript written in diss-master.ilg.
