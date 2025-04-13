@@ -5,7 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-In this chapter, I will show you how to use your own some of the commands in the template for PhD theses. The following topics will be explained:
+In this chapter, I will show you how to use some of the commands and packages in the template for PhD theses. The following topics will be explained:
 
 \begin{itemize}
 	\item What is in the file \texttt{localcommands} and how can I use the commands? (Sec.~\ref{ch:Commands})
@@ -28,6 +28,9 @@ In this chapter, I will show you how to use your own some of the commands in the
 \end{itemize}
 
 
+Take into account that this is not an introduction into \LaTeX . For a short \LaTeX\  introduction in German, see \citet{Freitag&MyP15a}.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Own commands}
@@ -44,111 +47,9 @@ In the file \texttt{texfiles/localcommands} you can define your own commands. I 
 	\item \verb|\gq{argument}|  renders the German single quotation marks, as in \gq{argument}.
 	
 	\item The commands \verb|\red{argument}| and \verb|\blue{argument}| render text in blue or red, e.g.\ \red{argument}, \blue{argument}.
+	
+	\item The commands \verb|\clrr{argument}| and \verb|\clry{argument}| render text marked with red  or yellow, e.g.\ \clrr{argument}, \clry{argument}.
 \end{itemize}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{Type setting}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\begin{table}[ht!]
-%	\centering
-%	\begin{tabular}{l|l|l}
-%		\textbf{input} & \textbf{output} & \textbf{function} \\
-%		\midrule
-%		\textbackslash gqq\{test\} & \gqq{test} & German double quotation marks \\
-%		\textbackslash gq\{test\} & \gq{test} & German single quotation marks\\
-%		\textbackslash gs\{test\} & \gs{test} & putting something between dashes \\
-%		\textbackslash obj\{test\} & \obj{test} & marking object language \\
-%		\textbackslash term\{test\} & \term{test} & for terminology \\
-%		\textbackslash size\{test\} & \size{test} & e.g.\ to resize sources \\
-%		Test\textbackslash scdown\{test\} & Test\scdown{test} & marking grammatical categories \\
-%	\end{tabular}
-%\caption{Type setting}
-%\end{table}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\subsection{Linguistic typography}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%
-%\begin{table}[ht!]
-%\centering
-%	\begin{tabular}{l|l|l}
-%		\textbf{input} & \textbf{output} & \textbf{function} \\
-%		\midrule
-%		\textbackslash ra Test & \ra Test & right arrow without space \\
-%		\textbackslash ras Test & \ras Test & right arrow with space \\
-%		\textbackslash la Test & \la Test & left arrow without space  \\
-%		\textbackslash las Test & \las Test & left arrow with space \\
-%	\end{tabular}
-%\caption{Linguistic typography I}
-%\end{table}
-
-
-
-%\begin{table}[ht!]
-%\centering
-%	
-%\scalebox{.85}{
-%\begin{tabular}{l|l|p{7.5cm}}
-%	\textbf{input} & \textbf{output} & \textbf{function} \\
-%	\midrule
-%%		\textbackslash ab\{ch\} &\ab{ch}& notation for features and graphemes \\
-%%		\textbackslash abe\{test\} & \abe{test} & for features and graphemes in italics \\
-%%		\textbackslash type\{e,t\} & \type{e,t} &  for single types \\
-%		\$\textbackslash typem\{e,t\textbackslash typem\{e,t\}\}\$ & $\typem{e,t\typem{e,t}}$ &  for complex types in math mode \\
-%		\$\textbackslash ds\{test\}\$ & $\ds{test}$ & for defining denotational sets: $R \in $ $\ds{\typem{e, \typem{e,t}}}$ \\
-%		\textbackslash sem\{test\} & \sem{test} & meaning brackets \\
-%		\$\textbackslash semm\{test\}\$ & $\semm{test}$ & meaning brackets in math mode \\		\textbackslash pred\{test\} &  \pred{test} & for differentiating between expressions in object language and predicates in formulae: $\semm{sleep} := \lambda x . \pred{sleep} (x)$\\
-%		\textbackslash predO\{test\} & \predO{test}  & for operators: $\lambda x \lambda P . \predO{beg}(P(x))$ \\
-%%		\textbackslash val\{neut\} & \val{neut} & for HPSG values\\
-%%		\textbackslash feat\{gender\} & e.g.\ at{gender} & for HPSG features \\
-%		&& \\
-%	\midrule
-%	&&\\
-%%		\textbackslash down\{test\}text & \down{test} text & subscript \\
-%		\textbackslash up\{test\}text & \up{test} text & superscript \\
-%		\$\textbackslash downm\{test\}text\$ & $\downm{test}text$  & subscript normal font in math mode\\
-%		\$\textbackslash upm\{test\}text\$ & $\upm{test}text$   & superscript normal font in math mode\\
-%		\end{tabular}
-%}
-%	\caption{Linguistic typography II}
-%\end{table}
-%
-%
-%\clearpage
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Colours}
-\label{ch:Colours}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{table}[ht!]
-	\centering
-	\begin{tabular}{l|l|l}
-		\textbf{input} & \textbf{output} & \textbf{function} \\
-		\midrule
-		\textbackslash blue\{test\} & \blue{test} & blue text \\
-%		\textbackslash green\{test\} & \green{test} & green text \\
-		\textbackslash red\{test\} & \red{test} & red text \\
-		\textbackslash clrr\{test\} & \clrr{test} & red box \\
-		\textbackslash clry\{test\} & \clry{test} & yellow box \\
-	\end{tabular}
-	\caption{Colours}
-\end{table}
-
-
-\clearpage
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -158,8 +59,12 @@ In the file \texttt{texfiles/localcommands} you can define your own commands. I 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-In this document, the package \texttt{lsp-gb4eMyP} is used for creating example environments.
-It is a slightly modified (almost error-free) version of \texttt{gb4e} (see the \texttt{gb4e} manual or \citet{Freitag&MyP15a}).
+In this document, the package \texttt{langsci-gb4e} is loaded%
+	%
+	\footnote{All packages are loaded in the file \texttt{texfiles/localpackages}.} %
+	%
+for creating example environments.
+It is a slightly modified version of \texttt{gb4e}, see the \texttt{gb4e} manual \citep{Kolb&Co10a} or \citet{Freitag&MyP15a}) for further explanations.
 \texttt{lsp-gb4eMyP} can be used with the same \LaTeX \ syntax as \texttt{gb4e}:
 
 \smallskip
