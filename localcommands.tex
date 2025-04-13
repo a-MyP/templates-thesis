@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%           MyP-Commands  2019.10.05    PhD thesis + PDF-LaTeX       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Extra complex long definitions (e.g. X-bar) are in:
+%% 
+%%% localextracommands/lec-...
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABBREVIATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbreviations in German
+% package needed: xspace
+% Short space in German abbreviations: \,	
+\newcommand{\dash}{\mbox{d.\,h.}\xspace}
+\newcommand{\idR}{\mbox{i.\,d.\,R.}\xspace}
+\newcommand{\ieS}{\mbox{i.\,e.\,S.}\xspace}
+\newcommand{\iwS}{\mbox{i.\,w.\,S.}\xspace}
+\newcommand{\su}{\mbox{s.\,u.}\xspace}
+\newcommand{\ua}{\mbox{u.\,a.}\xspace}
+\newcommand{\va}{\mbox{v.\,a.}\xspace}
+\newcommand{\vgl}{\mbox{vgl.}\xspace}
+\newcommand{\zB}{\mbox{z.\,B.}\xspace}
+%\newcommand{\s}{s.~}
+%not possibel: \dh --> d.\,h.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Abbreviations in English
+\newcommand{\ao}{\mbox{a.o.}\xspace}	% among others
+\newcommand{\cf}[1]{(cf.~#1)}	% confer = compare
+\newcommand{\cfe}[1]{(cf.~(\ref{#1}))}	% compare + example
+\newcommand{\ia}{i.a.}	% inter alia = among others
+\newcommand{\ie}{i.e.~}	% id est = that is
+\newcommand{\fe}{e.g.~}	% exempli gratia = for example
+%not possible: \eg --> e.g.~
+\newcommand{\vs}{vs.\ }	% versus
+\newcommand{\wrt}{w.r.t.\ }	% with respect to
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TYPE SETTING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% German quotation marks:
+\newcommand{\gqq}[1]{\glqq{}#1\grqq{}}		%double
+\newcommand{\gq}[1]{\glq{}#1\grq{}}			%simple
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dash:
+\newcommand{\gs}[1]{--\,#1\,--}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Object- and Meta-language marking:
+%\newcommand{\obj}[1]{\glqq{}#1\grqq{}}	             % German double quotes
+%\newcommand{\obj}[1]{``#1''}					           % English double quotes
+\newcommand{\obj}[1]{\emph{#1}}                          % Emphasising
+\newcommand{\term}[1]{\emph{#1}}                       % for terminology
+\newcommand{\termi}[1]{\index{#1}{\emph{#1}}}	  % for terminonoly + index
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Size:
+\newcommand{\size}[1]{{\footnotesize #1}}	% f.e. resize citations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Short spacing 12 %, 5 cm, etc.
+\newcommand{\sspace}[2]{#1\,#2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Small caps subscripts
+\newcommand{\scdown}[1]{\textsubscript{\textsc{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Writing text with colour:
+% package needed: xcolor
+% Command \alert{} in Beamer >> red
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Marking text with colour: 
+%%% package needed: color
+\newcommand{\clrr}[1]{\colorbox{red}{#1}}
+\newcommand{\clry}[1]{\colorbox{yellow}{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LINGUISTIC TYPOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Rightarrow & Leftarrow with and without space (--> <--)
+\def\ra{\ensuremath\rightarrow}			%without space
+\def\ras{\ensuremath\rightarrow\ }		%with space
+\def\la{\ensuremath\leftarrow}
+\def\las{\ensuremath\leftarrow\ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Semantic types (<e,t>), features, variables and graphemes in angled brackets 
+
+%%% types and variables, in math mode: angled brackets + italics + no space
+%\newcommand{\type}[1]{$<#1>$}
+
+%%% OR more correctly: 
+%%% Types and Variables: chevrons! + text in math mode (italics + no space)
+\newcommand{\type}[1]{$\langle #1 \rangle$} %% In Math Mode, only single types
+\newcommand{\typem}[1]{\langle #1 \rangle } %% Mathmode extra, complex types
+
+%%% Features and Graphemes: chevrons! + normal font
+\newcommand{\ab}[1]{$\langle$#1$\rangle$} %% no italics
+\newcommand{\abe}[1]{$\langle$\emph{#1}$\rangle$} %% italics
+
+%%% Meaning brackets ([[xyz]]) + expression in italics
+%% package needed: MnSymbol
+\newcommand{\sem}[1]{$\lsem$\emph{#1}$\rsem$} %% italics
+\newcommand{\semm}[1]{\lsem \textrm{\emph{#1}} \rsem} %% in math mode, italics
+
+%% Denotational set
+%% use in math mode: \ds{\typem{e,t}}
+\newcommand{\ds}[1]{\textrm{D}_{#1}}
+
+%% Predicates in formulae
+%% use in math mode: \pred{Tisch} 
+%\newcommand{\pred}[1]{\textrm{#1}'}  %% simple predicate with prime
+\newcommand{\pred}[1]{\texttt{#1}}  %% simple predicate in type writer
+\newcommand{\predO}[1]{\textrm{\textsc{#1}}} %% Operator in small caps
+
+%% Presuppositions
+\newcommand{\prspp}{$\gg$} 
+
+%% Implicature
+\newcommand{\implc}{$+ \mkern-5mu >$} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Function symbol in Beamer Class!
+%% italics and serif
+\newcommand{\func}{\emph{\textrm{f}}}
+\newcommand{\gunc}{\emph{\textrm{g}}}
+\newcommand{\chiF}[1]{\chi _{\textrm{#1}}} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HPSG: Features and Values!
+\newcommand{\wert}[1]{\emph{#1}}        %Values & Types
+\newcommand{\feat}[1]{\textsc{#1}}       %Features
+\newcommand{\inx}[1]{\fbox{\footnotesize #1}}       %HPSG indices
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Subscript & Superscript: no italics inside math mode
+\newcommand{\down}[1]{\textsubscript{#1}}
+\newcommand{\downm}[1]{_{\textrm{#1}}}
+
+\newcommand{\up}[1]{\textsuperscript{#1}}
+\newcommand{\upm}[1]{^{\textrm{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Shorter Underline
+\DeclareTextCommand{\_}{T1}{\leavevmode \kern.06em\vbox{\hrule width.4em}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% (Syntactic) Trees
+% package needed: forest
+% with option: linguistics
+
+%%% Setting for complex trees
+%% "bottom word" is the old "sn edges", but the later is used as default (idk y)
+\forestset{
+	bottom word/.style={for tree={parent anchor=south, child anchor=north,align=center,base=bottom,where n children=0{tier=word,inner xsep=0pt,outer sep=0pt}{}}}, 
+	%
+	background tree/.style={for tree={text opacity=0.2,draw opacity=0.2,edge={draw opacity=0.2}}}
+}
+
+%% Use HideWd for translations when using roof and the translations are longer than the original text
+%% https://tex.stackexchange.com/questions/167978/smaller-roofs-for-forest
+\newcommand\HideWd[1]{%
+	\makebox[0pt]{#1}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% X-bar notation
+
+%% Notation with primes (not emphasized): \xprime{X}
+\newcommand{\xprime}[1]{#1$^{\prime}$}
+\newcommand{\xxprime}[1]{#1$^{\prime\prime}$}
+\newcommand{\xxxprime}[1]{#1$^{\prime\prime\prime}$}
+
+%% Notation with primes (emphasized): \exbar{X}
+\newcommand{\exprime}[1]{\emph{#1}$^{\prime}$}
+\newcommand{\exxprime}[1]{\emph{#1}$^{\prime\prime}$}
+\newcommand{\exxxprime}[1]{\emph{#1}$^{\prime\prime\prime}$}
+
+
+%% Notation with zero and max (not emphasized): \xbar{X}
+\newcommand{\xzero}[1]{#1$^{0}$}
+\newcommand{\maxbar}[1]{#1$^{\textsc{max}}$}
+
+%% Notation with zero and max (emphasized): \xbar{X}
+\newcommand{\ezerobar}[1]{\emph{#1}$^{0}$}
+\newcommand{\emaxbar}[1]{\emph{#1}$^{\textsc{max}}$}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTES & BOX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Outputbox
+\newcommand{\outputbox}[1]{\noindent\fbox{\parbox[t][][t]{0.98\linewidth}{#1}}\vspace{0.5em}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TO DO NOTES
+% package needed: todonote
+\newcommand{\todolit}[1]{\todo[color=green!40]{LIT: #1}}
+\newcommand{\todored}[1]{\todo[color=red!60]{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Chapter Notes: \begin{chnote}\end{chnote}
+%%% package needed: 
+%
+\newenvironment{chnote}{
+	\color{blue}
+	%	\noindent \paragraph*{CHAPTER NOTES} 
+	\begin{itemize*}
+	}
+	%	
+	{
+	\end{itemize*} 
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Index newcommand:
+%%% package needed: imakeidx package
+\newcommand{\is}[1]{\index{#1}{#1}}
+
+%for terms of implementations (files, code, etc.)
+\newcommand{\ist}[1]{\index{#1}{\texttt{#1}}}
+
+%for terms in math mode
+\newcommand{\ism}[1]{\index{$#1$}{$#1$}}   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Theoretical Abbreviations & Commands
+%% in English: 
+
+%%%% Theories
+\newcommand{\GB}{\index{Government \& Binding Theory (GB)}{GB}}	
+
+\newcommand{\GPSG}{\index{Generalized Phrase Structure Grammar (GPSG)}{\ac{GPSG}}}	
+
+%%%% HPSG Terminology & Commands
+\newcommand{\attr}[1]{\index{attribute!\textsc{#1}}{\textsc{#1}}}
+	
+
+%%%% HPSG Principles:
+\newcommand{\CaseP}{\index{principle!Case Principle (CaseP)}{CaseP}}
+
+
+%%%% Further Terminology & Commands
+\newcommand{\throle}{\index{theta role}{theta role}}
+\newcommand{\throles}{\index{theta role}{theta roles}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Corpora
+% 
+\newcommand{\ESCOW}{\citetext{ESCOW \citeyear{SchaeferR&Co12a}}}

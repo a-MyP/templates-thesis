@@ -1,0 +1,593 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{\LaTeX\ Help}
+\label{ch:Help}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In this chapter, I will show you how to use some of the commands in the template for PhD theses. The following topics will be explained:
+
+\begin{itemize*}
+	\item What is in the file \texttt{localcommands} and how can I use the commands? (Sec.~\ref{ch:Commands})
+	
+	\item How can I work with the package \texttt{lsp-gb4eMyP} for examples? (Sec.~\ref{ch:Examples})
+	
+	\item How can I add information (\fe sources) to examples \texttt{jambox}? (Sec.~\ref{ch:TextPositioning})
+		
+	\item How can I insert figures and tables with floating environments? (Sec.~\ref{ch:FigTab})
+	
+	\item Which entry types can I use for bibliographical information? (Sec.~\ref{ch:BibEntries} \& \ref{ch:CitationCommands})
+		
+	\item Abbreviations and indices (Sec.~\ref{ch:Indices})
+
+	\item How can I add personal notes to my text? (Sec.~\ref{ch:Notes})
+
+	\item How can I use the new environment for chapter notes? (Sec.~\ref{ch:Chapternotes})	
+
+	\item Further helpful \LaTeX\ literature (Sec.~\ref{ch:HelpLiterature})
+\end{itemize*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Own commands}
+\label{ch:Commands}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Here, you can see the result of some of the own commands (name of command in bold) defined in the file \texttt{localcommands}. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Abbreviations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{ll|ll}
+	\multicolumn{2}{l|}{\textbf{German}} & \multicolumn{2}{l}{\textbf{English}} \\
+	\textbf{input} & \textbf{output} & \textbf{input} & \textbf{output}  	\\
+\midrule
+	\textbackslash dash & \dash & 	\textbackslash ao & \ao \\
+	\textbackslash idR & \idR  & \textbackslash cf\{page xy\} & \cf{page xy} \\
+	\textbackslash su & \su & \textbackslash cfe\{ex:1\} & \cfe{ex:1} \\
+	\textbackslash ua & \ua  & \textbackslash ia & \ia \\
+	\textbackslash va & \va  & \textbackslash ie & \ie \\
+	\textbackslash zB & \zB & \textbackslash fe & \fe \\
+	& & \textbackslash vs & \vs\\
+	& & \textbackslash wrt & \wrt    
+	\end{tabular}
+\caption{Abbreviations}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Type setting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{l|l|l}
+		\textbf{input} & \textbf{output} & \textbf{function} \\
+		\midrule
+		\textbackslash gqq\{test\} & \gqq{test} & German double quotation marks \\
+		\textbackslash gq\{test\} & \gq{test} & German single quotation marks\\
+		\textbackslash gs\{test\} & \gs{test} & putting something between dashes \\
+		\textbackslash obj\{test\} & \obj{test} & marking object language \\
+		\textbackslash term\{test\} & \term{test} & for terminology \\
+		\textbackslash size\{test\} & \size{test} & e.g.\ to resize sources \\
+		Test\textbackslash scdown\{test\} & Test\scdown{test} & marking grammatical categories \\
+	\end{tabular}
+\caption{Type setting}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Linguistic typography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[ht!]
+\centering
+	\begin{tabular}{l|l|l}
+		\textbf{input} & \textbf{output} & \textbf{function} \\
+		\midrule
+		\textbackslash ra Test & \ra Test & right arrow without space \\
+		\textbackslash ras Test & \ras Test & right arrow with space \\
+		\textbackslash la Test & \la Test & left arrow without space  \\
+		\textbackslash las Test & \las Test & left arrow with space \\
+	\end{tabular}
+\caption{Linguistic typography I}
+\end{table}
+
+
+
+\begin{table}[ht!]
+\centering
+	
+\scalebox{.85}{
+\begin{tabular}{l|l|p{7.5cm}}
+	\textbf{input} & \textbf{output} & \textbf{function} \\
+	\midrule
+%		\textbackslash ab\{ch\} &\ab{ch}& notation for features and graphemes \\
+%		\textbackslash abe\{test\} & \abe{test} & for features and graphemes in italics \\
+%		\textbackslash type\{e,t\} & \type{e,t} &  for single types \\
+		\$\textbackslash typem\{e,t\textbackslash typem\{e,t\}\}\$ & $\typem{e,t\typem{e,t}}$ &  for complex types in math mode \\
+		\$\textbackslash ds\{test\}\$ & $\ds{test}$ & for defining denotational sets: $R \in $ $\ds{\typem{e, \typem{e,t}}}$ \\
+		\textbackslash sem\{test\} & \sem{test} & meaning brackets \\
+		\$\textbackslash semm\{test\}\$ & $\semm{test}$ & meaning brackets in math mode \\		\textbackslash pred\{test\} &  \pred{test} & for differentiating between expressions in object language and predicates in formulae: $\semm{sleep} := \lambda x . \pred{sleep} (x)$\\
+		\textbackslash predO\{test\} & \predO{test}  & for operators: $\lambda x \lambda P . \predO{beg}(P(x))$ \\
+%		\textbackslash val\{neut\} & \val{neut} & for HPSG values\\
+		\textbackslash feat\{gender\} & \feat{gender} & for HPSG features \\
+		&& \\
+	\midrule
+	&&\\
+%		\textbackslash down\{test\}text & \down{test} text & subscript \\
+		\textbackslash up\{test\}text & \up{test} text & superscript \\
+		\$\textbackslash downm\{test\}text\$ & $\downm{test}text$  & subscript normal font in math mode\\
+		\$\textbackslash upm\{test\}text\$ & $\upm{test}text$   & superscript normal font in math mode\\
+		\end{tabular}
+}
+	\caption{Linguistic typography II}
+\end{table}
+
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{X-bar notation}
+\label{ch:Xbar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{multicols}{2}
+
+
+\begin{tabular}{l|l}
+	\textbf{input} & \textbf{output} \\
+	\midrule
+\textbackslash xzero\{X\} & \xzero{X} \\
+\textbackslash xprime\{X\} & \xprime{X} \\
+\textbackslash xxprime\{X\} &\xxprime{X} \\
+\textbackslash xxxprime\{X\} &\xxxprime{X} \\
+\textbackslash maxbar\{X\} & \maxbar{X} \\
+\end{tabular}
+\captionof{table}{Notation for normal text}
+
+\begin{tabular}{l|l}
+		\textbf{input} & \textbf{output} \\
+	\midrule
+\textbackslash ezerobar\{X\} & \ezerobar{X} \\
+\textbackslash exprime\{X\} & \exprime{X} \\
+\textbackslash exxprime\{X\} & \exxprime{X} \\
+\textbackslash exxxprime\{X\} & \emph{\exxxprime{X}} \\
+\textbackslash emaxbar\{X\} & \emaxbar{X} \\
+\end{tabular}
+\captionof{table}{Notation in italics}
+
+\end{multicols}
+
+
+%\clearpage
+
+
+The package \texttt{lsp-gb4eMyP} already provides the following commands which are therefore not included in the \texttt{localcommands} file:
+
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{l|l}
+	\textbf{input} & \textbf{output} \\
+	\midrule
+	\textbackslash obar\{X\} & \obar{X}\\
+	\textbackslash ibar\{X\} & \ibar{X}\\
+	\textbackslash iibar\{X\} & \iibar{X} \\
+\end{tabular}
+\caption{\texttt{lsp-gb4eMyP} commands}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Colours}
+\label{ch:Colours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[ht!]
+	\centering
+	\begin{tabular}{l|l|l}
+		\textbf{input} & \textbf{output} & \textbf{function} \\
+		\midrule
+		\textbackslash blue\{test\} & \blue{test} & blue text \\
+		\textbackslash green\{test\} & \green{test} & green text \\
+		\textbackslash red\{test\} & \red{test} & red text \\
+		\textbackslash clrr\{test\} & \clrr{test} & red box \\
+		\textbackslash clry\{test\} & \clry{test} & yellow box \\
+	\end{tabular}
+	\caption{Colours}
+\end{table}
+
+
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Examples}
+\label{ch:Examples}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In this document, the package \texttt{lsp-gb4eMyP} is used for creating example environments.
+It is a slightly modified (almost error-free) version of \texttt{gb4e} (see the \texttt{gb4e} manual or \citet{Freitag&MyP15a}).
+\texttt{lsp-gb4eMyP} can be used with the same \LaTeX \ syntax as \texttt{gb4e}:
+
+\smallskip
+\noindent
+\textbf{\textbackslash begin\{exe\}}\\
+\textbf{\textbackslash ex} This is an example\\
+\textbf{\textbackslash ex} This is the second example.
+
+\textbf{\textbackslash begin\{xlist\}}
+
+\textbf{\textbackslash ex} embedded examples with different numbering
+
+\textbf{\textbackslash ex} These examples have letter numbering.
+
+\textbf{\textbackslash ex} Another example with letter numbering
+
+\textbf{\textbackslash end\{xlist\}}\\
+\textbf{\textbackslash end\{exe\}}
+
+%\clearpage
+
+But \texttt{lsp-gb4eMyP} also provides a somewhat simpler syntax:
+
+\smallskip
+
+\noindent\textbf{\textbackslash ea} This is an example\\
+\textbf{\textbackslash ex} This is the second example.
+
+\textbf{\textbackslash ea} embedded examples with different numbering
+
+\textbf{\textbackslash ex} Another example with letter numbering
+
+\textbf{\textbackslash ex} These examples have letter numbering.
+
+\textbf{\textbackslash z}\\
+\textbf{\textbackslash z}
+
+\medskip
+
+The result of both is the same:
+
+\ea\label{ex:1} This is an example.
+
+\ex This is the second example.
+
+	\ea embedded examples with different numbering
+	
+	\ex These examples have letter numbering.
+	
+	\ex Another example with letter numbering
+	\z   
+\z
+
+
+%\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Text positioning}
+\label{ch:TextPositioning}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\settowidth\jamwidth{[Test jambox]}
+
+You can't use tabulators in \LaTeX\, but there is a much neater way to position a comment or remark with certain distance to the rest of your text: the package \texttt{jambox}.%
+	\footnote{Check also the command \textbackslash \texttt{hfill}.} %
+ It provides the command \texttt{\textbackslash jambox} whose distance from the right page margin (not in measuring units, but in letters) is set with the following command:
+
+\medskip
+
+\noindent \verb|\settowidth\jamwidth{[Test jambox]}|
+
+\smallskip
+
+\verb|\jambox{[Test jambox]}|	\jambox{[Test jambox]}
+
+\verb|\jambox{[Test]}|	\jambox{[Test]}
+
+\medskip
+
+\settowidth\jamwidth{(Chomsky, 1957: 15)}
+\ea Colorless green ideas sleep furiously. \jambox{\citep[15]{Chomsky57a}}
+
+\ex 
+\gll Peter hat Marie erschrocken. \\
+Peter has Mary frightened\\ \jambox{[Exp-Object verb]}
+\glt `Peter has frightened Mary.' 
+
+\ex
+\gll Maria liebt Peter.\\
+`Mary loves Peter.'\\ \jambox{[Exp-Subject verb]}
+\z
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figures and Tables}
+\label{ch:FigTab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+There is a floating environment for figures. It is floating but you can fix the figure on a position with the option \texttt{[ht!]}. The environment is helpful to center figures using the command \texttt{\textbackslash centering} and to add captions that are listed in the List of Figures:
+
+\begin{itemize}
+	\item[] \texttt{\textbackslash caption}[caption in the list of figures] \{caption under the figure\}
+\end{itemize}
+
+By using the command \texttt{\textbackslash includegraphics} from the package \texttt{graphicx} you may be able to include pictures. All you have to do is indicating the graphic's file path (see the Figure~\ref{fig:Frege}).
+
+\bigskip
+
+{	\footnotesize
+\noindent \texttt{\textbackslash begin\{figure\}[ht!]\\
+	\textbackslash centering\\
+	\textbackslash includegraphics[scale=.45]\{graphics/Young-Frege\} \\
+	\textbackslash caption[Young Frege]\{Young Frege\} \\
+	\textbackslash end\{figure\} }
+}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[scale=.45]{graphics/Young-Frege}
+	\caption[Young Frege]{Young Frege}
+	\label{fig:Frege}
+\end{figure}
+
+
+%\clearpage
+
+
+\noindent It works in the same way for tables:
+
+\bigskip
+
+
+{\footnotesize
+\noindent \texttt{\textbackslash begin\{table\}[ht!]\\
+	\textbackslash centering\\
+	\\
+	\texttt begin\{tabular\}\{l|l\}\\
+	Figure \& Table \textbackslash\textbackslash \\
+	\textbackslash hline \\
+	test \& test \\
+	\textbackslash end\{tabular\}\\
+	\\
+	\textbackslash caption[Test table]\{Test table\} \\
+	\textbackslash end\{table\} }}
+
+\bigskip
+
+\begin{table}[ht!]
+	\centering
+\begin{tabular}{l|l}
+	Figure & Table \\
+	\hline
+	test & test \\
+\end{tabular}
+	\caption[Text table]{Test table}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Examples for different bibliographical entries}
+\label{ch:BibEntries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+In order to see which information you need in your Bib\TeX\ file for every different entry type (article, book, manuscript, etc.), check the file: \texttt{literature}, or \citet{Freitag&MyP15a}.%
+	\footnote{See also \url{https://en.wikipedia.org/wiki/BibTeX}.} %
+If you want to see the output for every specific entry type (\fe \texttt{phdthesis} \vs \texttt{book}), take a look at the bibliography of this PDF. This only works in some cases, but you can also try to hold \textsc{ctrl} (or \textsc{cmd} in Mac) and click on the entries' IDs. If it turns underlined and blue, you will be taken to this exact entry in the \texttt{literature} file.
+
+
+\begin{itemize*}
+	\item PhD Thesis: \citet{Abney87a}
+	
+	\item Article in an edited book: \citet{Ackema15a}
+	
+	\item Book: \citet{Adger04a}
+	
+	\item Edited book: \citet{Kertesz&Co19a} %\citet{MyP&Co14b}
+	
+	\item Article in a journal: \citet{Barwise&Co81a}
+	
+	\item Article in an online journal or database:
+	\citet{Kolb&Co10a}
+	
+	\item Unpublished work / manuscript: \citet{LeipzigGloss15a}, \citet{MyP17c}
+	
+	\item Published work without author, using a key, \ie an abbreviation for the citation (this can be used \fe for corpora): \citep{DR17a}
+	
+	\item Published entry in an encyclopedia (online): \citet{MyP18b}
+\end{itemize*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Examples for different citation commands with \texttt{natbib}}
+\label{ch:CitationCommands}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Here are some examples for citation commands. You can find the IDs for every bibliography entry in the file \texttt{literature}, but they are also being suggested as soon as you type in one of the \texttt{\textbackslash cite} commands.
+
+
+\vspace{.5cm}
+
+
+\begin{footnotesize}
+
+\begin{tabular}{p{7cm}|p{5.6cm}}
+	\textbf{input} & \textbf{output} \\
+	\midrule
+\verb|\citep{Nolda&Co14a} | & { \citep{Nolda&Co14a}} \\
+	
+\verb|\citep[cf.][4--5]{Chomsky57a}| & \citep[cf.][4--5]{Chomsky57a} \\
+	
+ \verb|\citet[cf.][]{Abney87a}| & \citet[cf.][]{Abney87a} \\
+	
+\verb|\citep[cf.][]{Chomsky70a}| & \citep[cf.][]{Chomsky70a} \\
+	
+\verb|\citep[56--76]{Heim&Kratzer00a}| & {\citep[56--76]{Heim&Kratzer00a}} \\
+	
+ \verb|\citealp[56]{Kertesz&Co19a}| & {\citealp[56]{Kertesz&Co19a} }\\
+	
+ \verb|\citealt[43ff]{Chomsky81b}| &{ \citealt[43ff]{Chomsky81b}} \\
+	
+\verb|\cf{\fe \citealt{Krifka14a,|  &
+	{(cf.\ \fe \citealt{Krifka14a, Chomsky65a};} \\ 
+\verb|Chomsky65a,Wiese&Co14a}}| &{\citealt{Wiese&Co14a})} \\
+\end{tabular}
+
+\end{footnotesize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Abbreviations and indices}
+\label{ch:Indices}
+\index{index|(} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Some commands are defined in a way that the word used in the command is added to the index of the dissertation. So \fe when \verb|\GB| is used the output in the text is: \GB , and the page in which the term was used is added to the index.  Other commands are connected to the \texttt{acronym} package as well as to the index (see Abbreviations). 
+
+
+So for instance the command \verb|\GPSG| includes in the first use the whole name and the abbreviation in parentheses cf.\ \GPSG . The next time the the command is used, only the abbreviation is shown, \fe \GPSG . See the definition of both commands (\GB\ and \GPSG ) in the file \texttt{localcommands} and take a look at the section Abbreviations. If you need it, combine in the same fashion all elements in Abbreviations to the index as is done in \texttt{localcommands}.
+
+
+The pre-defined acronyms in Abbreviations are: 
+\begin{multicols}{2}
+
+\begin{itemize*}
+\item \ac{acc}, 
+\item \ac{ARG-ST}, 
+\item \ac{AVM},  
+\item \ac{BAG}, 
+\item \ac{CP}, 
+\item \ac{dat}, 
+\item \ac{DTR}, 
+\item \ac{EXP}, 
+\item \ac{gen}, 
+\item \ac{GPSG}, 
+\item \ac{HFC}, 
+\item \ac{IPA}, 
+\item \ac{LEX-DTR}, 
+\item \ac{lxgen},  
+\item \ac{lxnom}, 
+\item \ac{MRS}, 
+\item \ac{NP}, 
+\item \ac{QP}, 
+\item \ac{S}, 
+\item \ac{SemP}, 
+\item \ac{TAG}, 
+\item \ac{TH}. 
+\end{itemize*}
+
+\end{multicols}
+
+Own commands are also useful when you don't know yet which spelling you are going to use for a term, \fe the command \verb|\throle| (and \verb|throles| for the plural) can be used to add the term to the index, and, see: one \throle\ and two \throles . If you decide later, that you want to write it with an hyphen, you just need to change the output of the command without looking in the whole document for the terms. In our own commands, there are three commands for indices:
+
+\begin{itemize*}
+	\item \verb|\is| has one argument and uses the word(s) written as argument and gives it back in the output as well as including it in the index, \fe \is{argument structure}.
+	
+	\item \verb|\ist| has one argument and uses the word(s) written as argument giving it back in the output, but in typewriter font, as well as including it in the index (in a normal font), \fe \ist{argument structure}.
+	
+	\item \verb|ism| has one argument and uses the mathematical symbol written as argument giving it back in the output, as well as including it in the index. The symbols used with this command normally need a math environment, but not inside this command, \fe \verb|\ism{\alpha}| for \ism{\alpha}.
+\end{itemize*}
+
+
+For further information about indices and acronyms, check the documentation of the packages \verb|imakeidx|, \verb|acronym|, and the Wikipedia page for indexing.%
+%
+\footnote{\url{https://en.wikibooks.org/wiki/LaTeX/Indexing}} %
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% END OF SECTION
+\index{index|)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Notes}
+\label{ch:Notes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\noindent If you want to write preliminary margin notes, \todo{This note is orange.} you can use the command \texttt{\textbackslash todo} for a note using the package \texttt{\textbackslash todonotes}. Two further commands are defined in the \texttt{localcommands} file. One command for green notes for literature: \texttt{\textbackslash todolit}. \todolit{\citep{Adger04a}} An the other command is for red notes \texttt{\textbackslash todored}. \todored{A red note!}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Chapter notes}
+\label{ch:Chapternotes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+A last new command/environment, I found very useful is the environment \verb|chnote|. It works like \texttt{itemize}, but it prints the list in blue. You can use it at the end of your chapters for notes and lists of things you want to add to your chapter later. You will find the definition of this environment in the file \texttt{localcommands}.
+
+\begin{chnote}
+	\item Do not forget to read \cite{Barwise&Co81a}.
+	\item Add an analysis of postnominal genitive adjuncts.
+\end{chnote}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Helpful literature}
+\label{ch:HelpLiterature}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+When writing your term paper / thesis, you can take a look at the following literature for further help (German explanations are for texts in German):
+
+
+\begin{itemize*}
+	\item \citet{DR17a}: Für Fragen der Rechtschreibung 
+	
+	\item \citet{MyP17c} oder \citet{Rothstein11a}: Für Fragen bzgl.\ der Fertigstellung von Hausarbeiten
+	
+	\item \citet{Haspelmath14a}: General style rules for linguistic papers
+	
+	\item \citet{LeipzigGloss15a}: Glossing rules
+	
+	\item \citet{Freitag&MyP15a}: Für Fragen bzgl.\ \LaTeX\
+	
+	\item \citet{Kohm&Co13a}: Für Fragen bzgl.\ der Formatierung mit dem KOMA-Script
+	
+	\item \citet{Kolb&Co10a}: For questions regarding the syntax of \texttt{gb4e} and \texttt{lsp-gb4eMyP}
+	
+\end{itemize*}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End of Chapter
+
+%\clearpage

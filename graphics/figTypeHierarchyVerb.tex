@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Compiled with PDFLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, landscape]{scrartcl}
+
+%%%%%%%%%%%%%%%%%%%
+%% Pakete:
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[T3,T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}		%Farbelemente
+\usepackage[ngerman,english]{babel}
+\usepackage[noenc,safe]{tipa}
+\usepackage{amssymb}
+%\usepackage{hyperref}
+
+
+%%Geometry: Setting up margins. This package must be loaded before `gb4e'
+\usepackage{geometry} 
+	\geometry{
+	left=.5cm,
+	right=.5cm,
+	%vmargin=3cm,
+	top=.5cm,
+	bottom=.5cm,
+	includeheadfoot
+	}
+
+
+%%%%%%%%%%%%%%%%%%%
+%%TikZ-qtree
+
+\usepackage{tikz-qtree}
+	\usetikzlibrary{positioning}
+
+%% has strange side effects
+%% allows for glosses in trees
+	\tikzset{every tree node/.style={align=left, anchor=north}}
+	\tikzset{every roof node/.append style={inner sep=0.1pt,text height=2ex,text depth=0.3ex}}
+%% alignment of the leave nodes:
+%% http://tex.stackexchange.com/questions/163056/aligning-several-trees-to-the-baseline
+%% seems not to work
+	\tikzset{every leaf node/.append style={text depth=0pt}}
+
+
+%%%%%%%%%%%%%%%%%%%
+%%Forest
+
+%% If Forest doesn't work because of a MikTeX update
+\usepackage{etex} 
+\usepackage{forest}
+
+
+%%%%%%%%%%%%%%%%%%%
+%%AVM
+
+\usepackage{avm}
+%%% Setting of avm (see LSP Guidelines)
+ \avmfont{\sc} 
+ \avmvalfont{\it} 
+%% command to fontify the type values of an avm 
+ \newcommand{\tpv}[1]{{\avmjvalfont #1}} 
+%% command to fontify the type of an avm and avmspan it
+ \newcommand{\tp}[1]{\avmspan{\tpv{#1}}}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%% Commands
+%%%%%%%%%%%%%%%%%%%
+
+%%% features and graphemes, in math mode: chevrons! + no italics + space
+\newcommand{\ab}[1]{$\langle$#1$\rangle$}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%% Document
+%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+%%NEU
+%%%%%%%%%%%%
+%%% Forest set
+{
+\forestset{
+sn edges/.style={for tree={parent anchor=south, child anchor=north,align=center,base=bottom,
+%where n children=0{tier=word}
+{}}}, 
+background tree/.style={for tree={text opacity=0.2,draw opacity=0.2,edge={draw opacity=0.2}}}
+}
+
+\pgfkeys{/pgf/inner sep=0.6666em}
+%%
+%%%%%%%%%%%
+
+\begin{figure}[htbp]
+\centering
+%\normalsize
+\footnotesize
+\begin{forest}
+sn edges, s sep=2cm,
+[\emph{sign}
+	[\emph{root}
+		[\emph{strict-trans-verb-root}, name=Ziel, l=12cm, anchor= north
+			[\emph{mal-}\\
+			\emph{ess-}\\
+			\emph{schlag-},edge=dashed]
+		]
+	]
+	[\emph{pos-sign}\\
+	\begin{avm}
+	\[head \tpv{pos}\]
+	\end{avm}, l=1cm, anchor= north east
+	%
+		[\emph{verb-sign}\\
+		\begin{avm}
+		\[head \tpv{verb}\]
+		\end{avm}]{
+\draw[black] (.south)--(Ziel.north);}
+		%
+		[\emph{noun-sign}\\
+		\begin{avm}
+		\[head \tpv{noun}\]
+		\end{avm}]
+	]
+	[\emph{pos-sem}\\
+	\begin{avm}
+	\[cont$|$rels \tpv{list}\]
+	\end{avm}
+	%
+		[\emph{verb-sem}\\
+		\begin{avm}
+		\[ind \tpv{event}
+		\]
+		\end{avm}
+		%
+			[\emph{ag-rel}\\
+			\begin{avm}
+			\[rels \tpv{ag-rel}
+			\]
+			\end{avm}
+			%
+				[\emph{ag-th-rel}\\
+				\begin{avm}
+				\[rels \tpv{ag-th-rel}
+				\]
+				\end{avm}
+				]{
+\draw[black] (.south)--(Ziel.north);
+}
+			]
+			%
+			[\emph{th-rel}\\
+			\begin{avm}
+			\[rels \tpv{th-rel}
+			\]
+			\end{avm}
+			]{
+\draw[black] (.south)--++(-8.1em,-3.6ex);}
+			%
+			[\emph{exp-rel}\\
+			\begin{avm}
+			\[rels \tpv{exp-rel}
+			\]
+			\end{avm}
+			]
+		]
+		[\emph{noun-sem}\\
+		\begin{avm}
+		\[ind \tpv{ind}
+		\]
+		\end{avm}
+		]
+	]
+	[\emph{unsaturated-sign}\\
+	\begin{avm}
+	\[spr \emph{list}\\
+	subj  \emph{list}\\
+	comps \emph{list}
+	\]		
+	\end{avm}
+	%	
+		[\emph{nom-arg}\\
+		\begin{avm}
+		\[subj  \ab{NP{[}\emph{nom}{]}}
+		\]		
+		\end{avm}
+		]
+		%
+		[\emph{nom-acc-arg}\\
+		\begin{avm}
+		\[subj  \ab{NP{[}\emph{nom}{]}}\\
+		comps \ab{NP{[}\emph{acc}{]}}
+		\]		
+		\end{avm}
+		]{
+\draw[black] (.south)--(Ziel.north);}
+	]
+]
+\end{forest}
+
+\end{figure}
+}
+
+
+
+
+\end{document}

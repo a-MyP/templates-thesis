@@ -1,0 +1,332 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          MyP-Packages   2020.11.12   PhD thesis + PDFLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[utf8]{inputenc}
+
+%%% Text in German:
+%\usepackage[english,ngerman]{babel}
+
+%% Text in English:
+\usepackage[ngerman,english]{babel}
+
+	%%% Change "Bibliography" into "References"
+	\addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+
+	%\addto{\captionsenglish}{\renewcommand{\bibname}{Literatur}}
+	
+	%%% Change ''Abbildung'' into ''Abb.'' (for: babel)
+	%\renewcommand{\thefigure}{\arabic{figure}}
+	%\addto\captionsngerman{%
+	%	\renewcommand{\figurename}{Abb.}%
+	%}
+	%\renewcommand{\figurename}{Abb.} 
+
+	
+%% TIPA encoding needs T3 & T1
+\usepackage[T3,T1]{fontenc}
+
+%% Fonts
+%\usepackage{lmodern}
+
+\usepackage{libertine}
+	% change typewriter font to lmodern (smaller than tt in libertine)
+	\renewcommand\ttdefault{lmtt}
+	
+%\usepackage{calligra}
+
+%% For compatible mathematics (PDFLaTeX), it is recommended to use 
+%\usepackage[libertine]{newtxmath}
+
+%% Blind text: \blindtext \Blindtext \blindtext[5] \blindlist{itemize}[x] ...
+\usepackage{blindtext}
+
+%% ulem: Strike out
+\usepackage[normalem]{ulem}  
+
+%% graphicx: if gb4e is active PDFLaTeX does not accept files with underscore. PDFLaTeX only accepts files with .jpg, .png, .pdf endings
+\usepackage{graphicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%           Special Math-Symbols                   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{MnSymbol}            %% Meaning brackets
+
+\usepackage{pifont}                   %% checkmark
+
+\usepackage{wasysym}              %% \Square \XBox \CheckedBox
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%         Tables & Lists & Columns            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Text in columns: \begin{multicols}{n} \columnbreak \end{multicols}
+\usepackage{multicol}
+%	\setlength{\columnsep}{.5cm}	
+
+%% Tables with specified width
+\usepackage{tabularx}
+
+%% For complex tables
+\usepackage{array}
+
+%% For other tables
+\usepackage{booktabs}
+
+%% For more than one row in a table
+\usepackage{multirow}
+
+%% Special lists: itemize*
+\usepackage{mdwlist}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Coloured elements                  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Use xcolor before `gb4e'!
+\usepackage{xcolor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%         TikZ                               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Trees                               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Forest must be loaded before `gb4e'
+%% Package loaded with forest: tikz
+
+\usepackage{forest}
+%% Needed for the "actual forest version"
+\useforestlibrary{linguistics}
+\forestapplylibrarydefaults{linguistics}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Venndiagram                         
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Package loaded with venndiagram: tikz
+\usepackage{venndiagram}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%       Attribute Value Matrices               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{avm}
+%%% Setting of avm (see LSP Guidelines)
+%	\avmfont{\sc}
+%	\avmvalfont{\it}
+\avmfont{\normalfont \scshape} 
+\avmvalfont{\normalfont \itshape} 
+%% command to fontify the type values of an avm 
+\newcommand{\tpv}[1]{{\avmjvalfont #1}} 
+%% command to fontify the type of an avm and avmspan it
+\newcommand{\tp}[1]{\avmspan{\tpv{#1}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          IPA                                 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[noenc,safe]{tipa}	
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Vowel diagram                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vowel}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%      Optimality Theory                       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If you are using OT, uncomment the following lines      
+%% % OT pointing hand
+%% \usepackage{pifont}
+%% \newcommand{\hand}{\ding{43}}
+%% % OT tableaux                                                
+%% \usepackage{pstricks,colortab}    
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%          Verbatim                            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%`Listings' must be loaded before `gb4e', use `verbatim' otherwise
+\usepackage{listings}
+
+	\lstset{
+		language=TeX,
+		backgroundcolor=\color{lightgray},
+		basicstyle={\footnotesize\ttfamily\color{blue}},
+		showstringspaces=false,
+		%	showspaces=false,
+		breaklines=true,
+		%	tabsize=2,
+		columns=flexible
+	}
+	\lstset{literate=%
+		{Ö}{{\"O}}1
+		{Ä}{{\"A}}1
+		{Ü}{{\"U}}1
+		{ß}{{\ss}}2
+		{ü}{{\"u}}1
+		{ä}{{\"a}}1
+		{ö}{{\"o}}1
+	}
+	
+	%\lstset{%frame=tb,
+	%	language=Perl,
+	%	aboveskip=3mm,
+	%	belowskip=3mm,
+	%	showstringspaces=false,
+	%	columns=flexible,
+	%	basicstyle={\small\ttfamily\color{blue}},
+	%	numbers=none,
+	%	%numberstyle=\tiny\color{gray},
+	%	extendedchars=false,
+	%	morekeywords={foo},
+	%	otherkeywords={\#\#},
+	%	%keywordstyle=\color{blau},
+	%	%commentstyle=\color{whiteblue},
+	%	%stringstyle=\color{mauve},
+	%	breaklines=true,
+	%	breakatwhitespace=true,
+	%	tabsize=3
+	%}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Indices                            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{imakeidx}
+
+\usepackage{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Bibliography                        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{natbib}	
+%	\setcitestyle{notesep={:~}}
+
+%\usepackage[sectionbib]{natbib}
+%	\setcitestyle{notesep={:~}}
+
+\usepackage[sectionbib]{natbib}
+\setlength{\bibsep}{0mm%pt plus 0.3ex
+}
+\setcitestyle{notesep={:~}}
+\setcitestyle{aysep={}} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%          Settings of the page                
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\KOMAoptions{
+%DIV=last,	% Correcting Satzspiegel + DIV=calc in master (DIV=last after font)
+%headsepline, 		%Line between heading and text (cf. Package scrpage2)
+%}
+%
+%Headers & Footers
+\usepackage[headsepline,
+			%footsepline
+			]{scrlayer-scrpage}
+	\pagestyle{scrheadings}
+	\clearscrheadfoot		%Clean all headers & footers
+%	%%%%%%%%%%%%%%%%%%%%%%%%%	
+%	%%One sided document:
+%	%\ihead{Kopfzeile innen}
+%	%\chead{Kopfzeile Mitte}
+%	\ohead{\headmark}
+%	\automark{section}
+%	%\ifoot{Fußzeile innen}
+%	%\cfoot{Fußzeile Mitte}
+%	\ofoot{\pagemark} 
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%Two sided document:
+	%\ihead{Kopfzeile innen}
+	%\chead{Kopfzeile Mitte}
+	\ohead{\headmark}
+	\automark[chapter]{chapter}
+	%\ifoot{Fußzeile innen}
+	%\cfoot{Fußzeile Mitte}
+	\ofoot{\pagemark} 
+	%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% (Vertical) Spacing
+\usepackage{setspace}
+	\onehalfspacing
+
+%% Space for abbreviations 'i.d.R'
+\usepackage{xspace}
+
+
+%% Geometry: Setting up margins. This package must be loaded before `gb4e'
+%\usepackage{geometry} 
+%	\geometry{
+%	left=3cm,
+%	right=3cm,
+%	%vmargin=3cm,
+%	top=3cm,
+%	bottom=3cm,
+%	includeheadfoot
+%	}
+
+
+%% Footnote options: 
+%% [bottom]: FN at the bottom, 
+%% [hang] + 10pt: FN align
+%% [splitrule]: If a FN is split across 2 pages, it adds a full-linelength line (http://tex.stackexchange.com/questions/32208/footnote-runs-onto-second-page)
+\usepackage[bottom, hang, splitrule]{footmisc}
+	\setlength\footnotemargin{0pt}
+%	\setlength{\footnotesep}{.7\baselineskip}	%More spacing btw. FNs
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%          Margin notes                        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% See definition in localcommands.sty, not working with Beamer class
+
+\usepackage{todonotes}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%           Examples                           
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% gb4e: more powerful than linguex, but with many bugs.
+%%% Add gb4e as one of the last packages! 
+%\usepackage{gb4e}
+
+%% Or use the lsp-gb4e variant of LSP
+\usepackage{lsp-gb4eMyP}
+
+%% to add additional information to the right of examples, uncomment the following line
+\usepackage{jambox}
+%	\jamwidth=2cm\relax 
+
+%% if you want the source line of examples to be in italics, uncomment the following line
+% \def\exfont{\it}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          Hyperref & URL                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[hyphens]{url}
+\usepackage[
+bookmarksnumbered, %For numbered bookmarks in PDF
+%	hidelinks %For links without colored borders
+]{hyperref}

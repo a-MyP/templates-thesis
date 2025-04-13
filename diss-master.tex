@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Compilation: PDFLaTeX BibTeX PDFLaTeX PDFLaTeX
+%%% Dissertation: Master file                
+%%% Style sheet: Antonio Machicao y Priemer   2019.10.05                                   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% based on lsp-skeleton.tex
+
+\documentclass[
+a4paper,
+11pt,
+twoside,	% oneside, twoside
+%twoside=false, 	%No difference between left and right page
+openright,	% openleft, openright, openany
+BCOR=12mm,	% Correcting the bind margin
+%DIV=calc,	% Correcting Satzspiegel + DIV=last in localpackages
+]{scrbook}
+
+%% Cf. localpackages for further page settings
+
+
+%% For a faster compilation use option: ``draft''
+%\documentclass[draft,a4paper,12pt]{scrbook}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  PACKAGES METADATA COMMANDS HYPHENATION            
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the 
+% following files. If you do not know what this might 
+% mean, you can safely ignore this section
+
+\input{localpackages}
+
+\input{localmetadata}
+
+\input{localhyphenation}
+
+\input{localcommands}
+
+\makeindex
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             PREAMBLE'S END                  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}       
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%     FRONTMATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% FRONTPAGE: Use ch000-Frontpage OR use maketitle 
+\input{chapters/ch000-Frontpage}
+
+%\maketitle                
+%%\thispagestyle{empty}
+
+
+\frontmatter
+
+
+\tableofcontents      
+
+
+\listoffigures
+	\addcontentsline{toc}{chapter}{List of Figures}
+
+
+\listoftables
+	\addcontentsline{toc}{chapter}{List of Tables}
+
+
+%%%% (un)comment if you have (not) preface, acknowledgements or abbreviations
+
+%	\input{chapters/ch00aPreface}
+
+	\input{chapters/ch00bAcknowledgements}
+
+ 	\input{chapters/ch00cAbbreviations}
+
+%	\input{chapters/ch00dAbb-ImplementationTypes}
+
+
+\mainmatter         
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%       CHAPTERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{chapters/ch01-Intro} 
+
+\input{chapters/ch02-Theory}
+
+\input{chapters/ch03-Analysis}
+
+\input{chapters/ch04-Conclusions}
+
+\input{chapters/ch05-LaTeX-Help}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%             References                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{singlespace}
+
+%% For two sided documents
+\cleardoublepage 
+
+%%% For one sided documents
+%\clearpage
+
+\phantomsection %this allows hyperlink in ToC to work
+\addcontentsline{toc}{chapter}{References}
+
+
+%%%% Bibliography style German
+%\bibliographystyle{deChicagoMyP}
+
+%%% Bibliography style English
+\bibliographystyle{enChicagoMyP}
+%\bibliographystyle{unified}
+
+\bibliography{literature}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                INDICES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% For two sided documents
+\cleardoublepage 
+
+%%% For one-sided documents
+%\clearpage
+
+\phantomsection %this allows hyperlink in ToC to work
+\addcontentsline{toc}{chapter}{Index} 
+
+
+\printindex 
+
+
+%\end{singlespace}
+
+
+\end{document}
