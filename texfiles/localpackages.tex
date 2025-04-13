@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%          MyP-Packages   2020.11.12   PhD thesis + PDFLaTeX
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%          MyP-Packages   2025/04/15   PhD thesis (short) + PDFLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \usepackage[utf8]{inputenc}
@@ -27,22 +27,16 @@
 %% TIPA encoding needs T3 & T1
 \usepackage[T3,T1]{fontenc}
 
-%% Fonts
-%\usepackage{lmodern}
 
+%% Fonts
 \usepackage{libertine}
 	% change typewriter font to lmodern (smaller than tt in libertine)
 	\renewcommand\ttdefault{lmtt}
 	
-
-%% For compatible mathematics (PDFLaTeX), it is recommended to use 
-%\usepackage[libertine]{newtxmath}
-
+	
 %% Blind text: \blindtext \Blindtext \blindtext[5] \blindlist{itemize}[x] ...
 \usepackage{blindtext}
 
-%% ulem: Strike out
-\usepackage[normalem]{ulem}  
 
 %% graphicx: if gb4e is active PDFLaTeX does not accept files with underscore. PDFLaTeX only accepts files with .jpg, .png, .pdf endings
 \usepackage{graphicx}
@@ -51,15 +45,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%           Special Math-Symbols                   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{MnSymbol}            %% Meaning brackets
-
-\usepackage{pifont}                   %% checkmark
-
-\usepackage{wasysym}              %% \Square \XBox \CheckedBox
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,19 +58,11 @@
 \usepackage{multicol}
 %	\setlength{\columnsep}{.5cm}	
 
-%% Tables with specified width
-\usepackage{tabularx}
-
-%% For complex tables
-\usepackage{array}
 
 %% For other tables
 \usepackage{booktabs}
 
-%% For more than one row in a table
-\usepackage{multirow}
-
-%% Special lists: itemize*
+%% For lists with less vertical space between single items, use as follows: ``\begin{itemize*} \item \end{itemize*}''
 \usepackage{mdwlist}
 
 
@@ -94,21 +74,12 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%         TikZ                               
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-\usepackage{tikz}
-\usetikzlibrary{patterns}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%          Trees                               
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Forest must be loaded before `gb4e'
 %% Package loaded with forest: tikz
 
 \usepackage{forest}
-	%% Needed for the "actual forest version"
 	\useforestlibrary{linguistics}
 	\forestapplylibrarydefaults{linguistics}
 

@@ -10,25 +10,19 @@ In this chapter, I will show you how to use some of the commands and packages in
 \begin{itemize}
 	\item What is in the file \texttt{localcommands} and how can I use the commands? (Sec.~\ref{ch:Commands})
 	
-	\item How can I work with the package \texttt{lsp-gb4eMyP} for examples? (Sec.~\ref{ch:Examples})
-	
-	\item How can I add information (e.g.\ sources) to examples \texttt{jambox}? (Sec.~\ref{ch:TextPositioning})
+	\item How can I work with the package \texttt{langsci-gb4e} for examples? (Sec.~\ref{ch:Examples})
 		
 	\item How can I insert figures and tables with floating environments? (Sec.~\ref{ch:FigTab})
 	
-	\item Which entry types can I use for bibliographical information? (Sec.~\ref{ch:BibEntries} \& \ref{ch:CitationCommands})
+	\item Which entry types can I use for bibliographic information? (Sec.~\ref{ch:BibEntries} \& \ref{ch:CitationCommands})
 		
 	\item Abbreviations and indices (Sec.~\ref{ch:Indices})
 
-	\item How can I add personal notes to my text? (Sec.~\ref{ch:Notes})
-
-	\item How can I use the new environment for chapter notes? (Sec.~\ref{ch:Chapternotes})	
-
-	\item Further helpful \LaTeX\ literature (Sec.~\ref{ch:HelpLiterature})
+	\item How can I add personal to-do notes to my text? (Sec.~\ref{ch:Notes})
 \end{itemize}
 
-
-Take into account that this is not an introduction into \LaTeX . For a short \LaTeX\  introduction in German, see \citet{Freitag&MyP15a}.
+All packages mentioned here are loaded in \texttt{texfiles/localpackages}.
+Take into account that this is not an introduction into \LaTeX . For a short \LaTeX\  introduction (in German), see \citet{Freitag&MyP15a}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -191,26 +185,26 @@ In order to see which information you need in your Bib\TeX\ file for different e
 If you want to see the output for every specific entry type (e.g.\ \texttt{phdthesis} vs.\ \texttt{book}), take a look at the bibliography of this PDF.
 
 
-\begin{itemize*}
+\begin{itemize}
 	\item PhD Thesis: \citet{Abney87a}
 	
 	\item Article in an edited book: \citet{Ackema15a}
 	
 	\item Book: \citet{Adger04a}
 	
-	\item Edited book: \citet{Nolda&Co14a}
+	\item Edited book: \citet{MyP&Co14b}
 	
 	\item Article in a journal: \citet{Barwise&Co81a}
 	
 	\item Article in an online journal or database:
 	\citet{Kolb&Co10a}
 	
-	\item Unpublished work / manuscript: \citet{MyP17c}
+	\item Unpublished work / manuscript: \citet{LeipzigGloss15a}
 	
 	\item Published work without author, using a key, i.e.\ an abbreviation for the citation (this can be used e.g.\ for corpora or dictionaries): \citep{DR17a}
 	
 	\item Published entry in an encyclopedia (online): \citet{MyP18b}
-\end{itemize*}
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -254,11 +248,10 @@ The package \texttt{natbib} (loaded in \texttt{texfiles/localpackages}) provides
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Abbreviations and indices}
 \label{ch:Indices}
-\index{index|(} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-For further information about indices, take a look at the documentation of the package \texttt{imakeidx}%
+For further information about \index{index}indices, take a look at the documentation of the package \texttt{imakeidx}%
 	%
 	\footnote{\url{https://ctan.org/pkg/imakeidx}.} %
 	%
@@ -293,28 +286,9 @@ If you want to write preliminary margin notes, \todo{This note is orange.} you c
 	\footnote{Take a look at the documentation of the package \url{https://ctan.org/pkg/todonotes}. You can customise your own to-do notes.} %
 	%
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Helpful literature}
-\label{ch:HelpLiterature}
+\section{Links in the PDF}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-When writing your term paper / thesis, you can take a look at the following literature for further help (German explanations are for texts in German):
-
-
-\begin{itemize*}
-	\item \citet{DR17a}: Für Fragen zur Rechtschreibung 
-	
-	\item \citet{MyP17c} oder \citet{Rothstein11a}: Für Fragen bzgl.\ der Fertigstellung von Hausarbeiten
-	
-	\item \citet{Haspelmath14a}: General style rules for linguistic papers
-	
-	\item \citet{LeipzigGloss15a}: Glossing rules
-	
-	\item \citet{Freitag&MyP15a}: Für Fragen bzgl.\ \LaTeX\
-	
-	\item \citet{Kolb&Co10a}: For questions regarding the syntax of \texttt{gb4e}
-	
-\end{itemize*}
+In the PDF file several elements are framed in red or green. These elements are links, the coloured frames will not appear in the print version of your document. In case you do not want to see the frames, just comment in the option \texttt{hidelinks} for the package \texttt{hyperref} in the file \texttt{texfiles/localpackages}.
