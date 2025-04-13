@@ -15,29 +15,9 @@
 % Abbreviations in German
 % package needed: xspace
 % Short space in German abbreviations: \,	
-\newcommand{\dash}{\mbox{d.\,h.}\xspace}
-\newcommand{\idR}{\mbox{i.\,d.\,R.}\xspace}
-\newcommand{\ieS}{\mbox{i.\,e.\,S.}\xspace}
-\newcommand{\iwS}{\mbox{i.\,w.\,S.}\xspace}
-\newcommand{\su}{\mbox{s.\,u.}\xspace}
-\newcommand{\ua}{\mbox{u.\,a.}\xspace}
-\newcommand{\va}{\mbox{v.\,a.}\xspace}
-\newcommand{\vgl}{\mbox{vgl.}\xspace}
-\newcommand{\zB}{\mbox{z.\,B.}\xspace}
-%\newcommand{\s}{s.~}
-%not possibel: \dh --> d.\,h.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Abbreviations in English
-\newcommand{\ao}{\mbox{a.o.}\xspace}	% among others
-\newcommand{\cf}[1]{(cf.~#1)}	% confer = compare
-\newcommand{\cfe}[1]{(cf.~(\ref{#1}))}	% compare + example
-\newcommand{\ia}{i.a.}	% inter alia = among others
-\newcommand{\ie}{i.e.~}	% id est = that is
-\newcommand{\fe}{e.g.~}	% exempli gratia = for example
-%not possible: \eg --> e.g.~
-\newcommand{\vs}{vs.\ }	% versus
-\newcommand{\wrt}{w.r.t.\ }	% with respect to
+\newcommand{\zB}{\mbox{z.\,B.}\xspace}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,36 +29,13 @@
 \newcommand{\gqq}[1]{\glqq{}#1\grqq{}}		%double
 \newcommand{\gq}[1]{\glq{}#1\grq{}}			%simple
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dash:
-\newcommand{\gs}[1]{--\,#1\,--}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Object- and Meta-language marking:
-%\newcommand{\obj}[1]{\glqq{}#1\grqq{}}	             % German double quotes
-%\newcommand{\obj}[1]{``#1''}					           % English double quotes
-\newcommand{\obj}[1]{\emph{#1}}                          % Emphasising
-\newcommand{\term}[1]{\emph{#1}}                       % for terminology
-\newcommand{\termi}[1]{\index{#1}{\emph{#1}}}	  % for terminonoly + index
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Size:
-\newcommand{\size}[1]{{\footnotesize #1}}	% f.e. resize citations
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Short spacing 12 %, 5 cm, etc.
-\newcommand{\sspace}[2]{#1\,#2}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Small caps subscripts
-\newcommand{\scdown}[1]{\textsubscript{\textsc{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Writing text with colour:
 % package needed: xcolor
 % Command \alert{} in Beamer >> red
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
-\newcommand{\green}[1]{\textcolor{green}{#1}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,27 +137,6 @@
 	\makebox[0pt]{#1}%
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% X-bar notation
-
-%% Notation with primes (not emphasized): \xprime{X}
-\newcommand{\xprime}[1]{#1$^{\prime}$}
-\newcommand{\xxprime}[1]{#1$^{\prime\prime}$}
-\newcommand{\xxxprime}[1]{#1$^{\prime\prime\prime}$}
-
-%% Notation with primes (emphasized): \exbar{X}
-\newcommand{\exprime}[1]{\emph{#1}$^{\prime}$}
-\newcommand{\exxprime}[1]{\emph{#1}$^{\prime\prime}$}
-\newcommand{\exxxprime}[1]{\emph{#1}$^{\prime\prime\prime}$}
-
-
-%% Notation with zero and max (not emphasized): \xbar{X}
-\newcommand{\xzero}[1]{#1$^{0}$}
-\newcommand{\maxbar}[1]{#1$^{\textsc{max}}$}
-
-%% Notation with zero and max (emphasized): \xbar{X}
-\newcommand{\ezerobar}[1]{\emph{#1}$^{0}$}
-\newcommand{\emaxbar}[1]{\emph{#1}$^{\textsc{max}}$}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

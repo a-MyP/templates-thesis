@@ -34,7 +34,6 @@
 	% change typewriter font to lmodern (smaller than tt in libertine)
 	\renewcommand\ttdefault{lmtt}
 	
-%\usepackage{calligra}
 
 %% For compatible mathematics (PDFLaTeX), it is recommended to use 
 %\usepackage[libertine]{newtxmath}
@@ -109,54 +108,22 @@
 %% Package loaded with forest: tikz
 
 \usepackage{forest}
-%% Needed for the "actual forest version"
-\useforestlibrary{linguistics}
-\forestapplylibrarydefaults{linguistics}
+	%% Needed for the "actual forest version"
+	\useforestlibrary{linguistics}
+	\forestapplylibrarydefaults{linguistics}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%          Venndiagram                         
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Package loaded with venndiagram: tikz
-\usepackage{venndiagram}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%       Attribute Value Matrices               
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{avm}
-%%% Setting of avm (see LSP Guidelines)
-%	\avmfont{\sc}
-%	\avmvalfont{\it}
-\avmfont{\normalfont \scshape} 
-\avmvalfont{\normalfont \itshape} 
-%% command to fontify the type values of an avm 
-\newcommand{\tpv}[1]{{\avmjvalfont #1}} 
-%% command to fontify the type of an avm and avmspan it
-\newcommand{\tp}[1]{\avmspan{\tpv{#1}}}
+\usepackage{langsci-avm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%          IPA                                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[noenc,safe]{tipa}	
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%          Vowel diagram                       
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{vowel}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%      Optimality Theory                       
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% If you are using OT, uncomment the following lines      
-%% % OT pointing hand
-%% \usepackage{pifont}
-%% \newcommand{\hand}{\ding{43}}
-%% % OT tableaux                                                
-%% \usepackage{pstricks,colortab}    
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,26 +152,6 @@
 		{ö}{{\"o}}1
 	}
 	
-	%\lstset{%frame=tb,
-	%	language=Perl,
-	%	aboveskip=3mm,
-	%	belowskip=3mm,
-	%	showstringspaces=false,
-	%	columns=flexible,
-	%	basicstyle={\small\ttfamily\color{blue}},
-	%	numbers=none,
-	%	%numberstyle=\tiny\color{gray},
-	%	extendedchars=false,
-	%	morekeywords={foo},
-	%	otherkeywords={\#\#},
-	%	%keywordstyle=\color{blau},
-	%	%commentstyle=\color{whiteblue},
-	%	%stringstyle=\color{mauve},
-	%	breaklines=true,
-	%	breakatwhitespace=true,
-	%	tabsize=3
-	%}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%          Indices                            
@@ -218,17 +165,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%          Bibliography                        
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{natbib}	
-%	\setcitestyle{notesep={:~}}
-
-%\usepackage[sectionbib]{natbib}
-%	\setcitestyle{notesep={:~}}
 
 \usepackage[sectionbib]{natbib}
-\setlength{\bibsep}{0mm%pt plus 0.3ex
-}
-\setcitestyle{notesep={:~}}
-\setcitestyle{aysep={}} 
+	\setlength{\bibsep}{0mm%pt plus 0.3ex
+	}
+	\setcitestyle{notesep={:~}}
+	\setcitestyle{aysep={}} 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,8 +240,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%          Margin notes                        
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% See definition in localcommands.sty, not working with Beamer class
-
 \usepackage{todonotes}
 
 
@@ -307,19 +247,21 @@
 %%%           Examples                           
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% gb4e: more powerful than linguex, but with many bugs.
-%%% Add gb4e as one of the last packages! 
-%\usepackage{gb4e}
+\usepackage{langsci-gb4e}
 
-%% Or use the lsp-gb4e variant of LSP
-\usepackage{lsp-gb4eMyP}
-
-%% to add additional information to the right of examples, uncomment the following line
-\usepackage{jambox}
-%	\jamwidth=2cm\relax 
-
-%% if you want the source line of examples to be in italics, uncomment the following line
-% \def\exfont{\it}
+%%%% gb4e: more powerful than linguex, but with many bugs.
+%%%% Add gb4e as one of the last packages! 
+%%\usepackage{gb4e}
+%
+%%% Or use the lsp-gb4e variant of LSP
+%\usepackage{lsp-gb4eMyP}
+%
+%%% to add additional information to the right of examples, uncomment the following line
+%\usepackage{jambox}
+%%	\jamwidth=2cm\relax 
+%
+%%% if you want the source line of examples to be in italics, uncomment the following line
+%% \def\exfont{\it}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
